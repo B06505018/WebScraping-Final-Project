@@ -43,9 +43,16 @@ body {
 }
 
 .game-title {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 64px;
     font-weight: 900;
+}
+
+.description {
+    display: none;
 }
 
 .parag-title {
@@ -63,7 +70,8 @@ body {
 }
 
 .choice-list {
-    /*display: none;*/
+    display: none;
+    height: 80px;
 }
 
 button {
@@ -91,12 +99,6 @@ button {
     border: #9d2eff 2px solid;
 }
 
-.start {
-    display: none;
-}
-
 img {
-    position: static;
-    top: 930px;
     height: 250px;
 }

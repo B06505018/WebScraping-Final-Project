@@ -45,7 +45,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 900;
     animation: zoom ease-out 0.8s;
     transition: 0.8s ease-out;
@@ -104,16 +104,23 @@ button {
 .button-right {
     margin-left: 10px;
     padding-left: 10px;
+    padding-right: 10px;
     text-align: left;
 }
 
 .button-left {
     text-align: left;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .start {
     text-align: center;
+}
+
+.restart {
+    text-align: center;
+    display: none;
 }
 
 .button-left:hover {

@@ -18,3 +18,9 @@ Team 8
 ## 遊玩須知  
 1. 完整劇本目前尚未呈現於成品，為顧及玩家的遊玩體驗，建議玩家選擇女性／無配偶／租屋之條件進行遊戲。  
 2. 未完成的路線將會出現「未完待續」之提示。  
+
+## local server
+1. 安裝Flask套件
+  pip install Flask
+2. 在backend資料夾下
+  flask run

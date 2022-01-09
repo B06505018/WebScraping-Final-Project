@@ -38,7 +38,7 @@ const E_end3_f_2 = new Node(
     E_end3_3, 
     1,
     [],
-    "./images/hospital_f.png",
+    "./images/hospital.png",
     false);
 
 const E_end3_f_1 = new Node(
@@ -59,6 +59,17 @@ const E_end2_2 = new Node(
     1,
     [],
     "./images/end2.png",
+    false);
+
+const E_end2_ff_1 = new Node(
+    "",
+    ["你一天比一天衰弱，細瘦的雙腿已承受不住頻繁的移動。有天，你按照慣例前往陽台，打算為盆栽澆水時，突然跌了一跤。",
+    "根據國民健康署的統計，高齡者的事故死亡原因，「跌倒」位居第二。65歲以上的長者在一年之間曾經跌倒的比例，高達1/6。 「跌倒」不只可能直接導致高齡者的死亡；即使獲得妥善的治療，後遺症仍會深遠地影響著高齡者的健康，包括移動緩慢、骨質脆弱、恐懼步行等。",
+    "你無法自行爬起，也發不出聲音求救，只能任憑意識愈來愈模糊……。"],
+    E_end2_2, /*end 2 */
+    2,
+    [],
+    "./images/fall_f.png",
     false);
 
 const E_end2_f_1 = new Node(
@@ -132,12 +143,21 @@ const A_PRAA_f_1 = new Node(
     "./images/PRAA_f.png",
     false);
 
-const A_reject_f_2 = new Node(
+const A_reject_f_3 = new Node(
     "",
-    ["為了避免有更多的詐騙受害者，你決定加入反詐騙公益團體，提供高齡者諮詢服務，並與政府的關懷小組合作，打造高齡者的社交安全防護網。 不過與此同時，你身體的老化徵兆愈來愈明顯，在〈老人福利法的規範下〉，65歲以上的高齡者，每年都可以免費接受地方政府辦理的基礎檢康檢查。 這天，你收到健檢報告後，驚訝地發現你居然被診斷出罹患了糖尿病！",
+    ["在〈老人福利法的規範下〉，65歲以上的高齡者，每年都可以免費接受地方政府辦理的基礎檢康檢查。 這天，你收到健檢報告後，驚訝地發現你居然被診斷出罹患了糖尿病！",
     "2020年，台灣65歲以上民眾高血糖的盛行率，男性與女性分別為27%和28.5%。而且隨著年齡增加，糖尿病患者比例也逐漸升高，且女性患者多於男性。"],
     A_PRAA_f_1,
     1,
+    [],
+    "./images/diabetes_f.png",
+    false);
+
+const A_reject_f_2 = new Node(
+    "",
+    ["為了避免有更多的詐騙受害者，你決定加入反詐騙公益團體，提供高齡者諮詢服務，並與政府的關懷小組合作，打造高齡者的社交安全防護網。 不過與此同時，你身體的老化徵兆愈來愈明顯……"],
+    A_reject_f_3,
+    0,
     [],
     "./images/suit_f.png",
     false);
@@ -224,10 +244,278 @@ const A_club_f_1 = new Node(
     "./images/club.png",
     false);
 
+const A_getOld_f_4 = new Node(
+    "",
+    ["起初，你和Indah比手畫腳，Indah則常常一頭霧水，並感到很抱歉。不過，在你們長期的相處下，漸漸建立默契。現在，你已經十分依賴Indah的照料，也把他視如己出，與他分享年輕時的打拼過程，也聽他傾訴心聲。", 
+    "在聊天的過程中，你知道Indah的其他姊妹必須負擔高額的仲介費，因此，你決定宣揚政府的「直接聘僱」政策，透過網路分享Indah和你的經歷，鼓勵大眾繞過仲介直接雇用移工，幫助Indah的姊妹們享有更合理的待遇，雇主也能省去多餘的費用。"],
+    E_end3_f_1,
+    1,
+    [],
+    "./images/goodCare_f.png",
+    false);
+
+const A_getOld_f_3 = new Node(
+    "",
+    ["你最後還是透過長照2.0計畫申請居家服務員，讓居服員定期到你家中服務。不過「論件計酬」的服務方式讓你只能精打細算，不敢請居服員做太多事，以要付的費用過高。 居服員為你準備一餐飯，加上飯後清理，得花費310元；清掃、洗衣則是每30分鐘200元。", 
+    "不過，定期為你服務的居服員阿美細心又熱情的態度，讓你對他很有好感。也因此每當阿美要離開時，都讓你依依不捨。你這時才發現，原來你十分害怕寂寞。 不過，礙於計價規定，你也不好意思多留阿美。 由於阿美並不能長時間陪在你身邊，因此當你突然心肌梗塞時，沒有人在第一時間發現。"],
+    E_end2_2,
+    1,
+    [],
+    "./images/foodCare_f.png",
+    false);
+
+const A_getOld_f_2 = new Node(
+    "",
+    ["你說得沒錯！許多高齡者總擔心，老了會給身邊的人添麻煩。其實，如果政府有良善的措施，不僅能改善照顧者須承受的負擔，也能使高齡者的價值和尊嚴受到保障。 雖然你的體力大不如前，但你認為，你仍可以對世界有所貢獻，因此，你決定聘雇看護協助你的生活起居。", 
+    "你透過長照機構找到願意到你家中服務的外籍看護Indah。由於Indah才來台灣一年，他的中文並不是很流利。 這讓你很困擾，因為你體力已經大不如前，不想花多餘的力氣在溝通上。"],
+    [A_getOld_f_3, A_getOld_f_4],
+    1,
+    ["合不來也沒辦法，Indah應該也很辛苦，還是辭退他好了。", "我想再試試看，說不定能找到合適的溝通模式。"],
+    "./images/care_f.png",
+    true);
+
+const A_getOld_f_1 = new Node(
+    "",
+    ["於是，你始終一個人靜靜度日，既不理會外在世界的紛擾，也不主動與他人接觸。就像現代版的隱士一樣。 最近，你發現身體狀況大不如前，一個人煮飯、做家務都變得十分吃力。", ],
+    [A_getOld_f_2, E_end2_ff_1],
+    0,
+    ["所有人都會老。老化並不可恥，是時候依賴他人了。", "如果我的身體無法再負荷日常生活，這也是命，就順其自然吧。"],
+    "./images/getOld_f.png",
+    true);
+
+const A_shareI_f_7 = new Node(
+    "",
+    ["理專後來為你投保了糖尿病專屬的醫療險，保費雖然稍高，但如果血糖控制得宜，還有提供保費折抵呢。果然，誠實為上策。 不過，你的病情始終是個隱憂，你很害怕到最後動也動不了，只能用鼻胃管進食，那樣一點人生樂趣也沒有！",],
+    A_PRAA_f_1,
+    0,
+    [],
+    "./images/worry_f.png",
+    false);
+
+const A_shareI_f_6 = new Node(
+    "",
+    ["不久後，你因為關節炎住院，理專前來慰問你，並且想協助你處理保險給付的問題。",
+    "「誒，阿姨，你有糖尿病嗎？」 由於你隱瞞了病情，保險公司拒絕理賠你的住院費用。理專也愛莫能助。 你只怨自己因小失大、悔不當初。"],
+    A_shareI_f_7,
+    1,
+    [],
+    "./images/hospital_f.png",
+    false);
+
+const A_shareI_f_5 = new Node(
+    "",
+    ["你決定瞞著不說，讓理專直接幫你投保。感覺真是省事多了。"],
+    A_shareI_f_6,
+    0,
+    [],
+    "./images/cici_f.png",
+    false);
+
+const A_shareI_f_4 = new Node(
+    "",
+    ["你去醫院檢查後驚訝地發現，你居然被診斷出罹患了糖尿病！ 2020年，台灣65歲以上民眾高血糖的盛行率，男性與女性分別為27%和28.5%。而且隨著年齡增加，糖尿病患者比例也逐漸升高，且女性患者多於男性。",
+    "之前聽理專說，如果健檢結果有問題的話，可能要繳比較高的保費，嚴重的話，還可能拒絕讓你投保。"],
+    [A_shareI_f_7, A_shareI_f_5],
+    1,
+    ["我應該誠實告訴理專我的身體狀況，這樣他才能幫我選擇最合適的保單。", "如果保費因此提高的話就划不來了！我不說他也不會知道吧。"],
+    "./images/diabetes_f.png",
+    true);
+
+const A_shareI_f_3 = new Node(
+    "",
+    ["這也怪不得，畢竟有前車之鑑，是該小心一些。 你查了網路，發現「只要被保險人超過60歲，不論壽險或健康險，一律須要體檢」，這下，你總算相信理專說的話了。"],
+    A_shareI_f_4,
+    0,
+    [],
+    "./images/share_f.png",
+    false);
+
+const A_shareI_f_2 = new Node(
+    "",
+    ["你決定重新考慮購買保險，透過網友的介紹，一位保險專員親自到你家中與你說明。不過他表示，因為你已經滿65歲，需要進行健檢，公司才能根據你的健康狀況，設定你該繳多少保費。"],
+    [A_shareI_f_7, A_shareI_f_3],
+    0,
+    ["年紀大了，趁機做個詳細的檢查也不錯。", "我還是有點懷疑……。"],
+    "./images/shareI.png",
+    true);
+
+const A_shareI_f_1 = new Node(
+    "",
+    ["你在社群網站上寫下了這次事件的始末，以及你深刻的反省。 靠著你長期累積的社群關注度，你的文章獲得廣大的回響，許多人看到你的文章，也分享了同樣的經驗。",
+    "大家不再避諱談論原本令人羞愧的往事，漸漸的，高齡詐欺的議題在網路社群上形成關注，迫使政府正視這個問題，開始草擬〈反金融剝削法〉。 許多金融機構也開始推動「白話契約範本」，讓精神與理解力下降的高齡者能更容易的選購合適的金融商品。"],
+    A_shareI_f_2,
+    1,
+    [],
+    "./images/share_f.png",
+    false);
+
+const A_appeal_f_1 = new Node(
+    "",
+    ["你將社群網站上的對話紀錄截圖給保險公司，證明你並沒有同意對方幫你投保，因此這項保險契約在法律上並不成立。 多虧你的機智，才化解了一次詐騙危機。"],
+    [A_shareI_f_1, A_pride_f_1],
+    0,
+    ["我應該透過網路分享這次的經驗，讓其他高齡者更有警覺心，才不會受騙。", "太丟臉了，沒想到自己也會像新聞裡的那些老人一樣被網友騙！我絕對不會跟其他人提起這件事。"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_ensureI_f_3 = new Node(
+    "",
+    ["後來，你透過網路才知道， ……目前人身保險（壽險、健康險）的最低承保年齡，最高只到60或65歲，因此許多高齡者買不到商業保險。某些保險公司便推出以「不用體檢，一定承保」為訴求的「老人保單」。但需要注意的是，儘管號稱「一定保」，卻不一定「理賠」。如果當初投的是「意外險」，那麼只要並非發生事故，就拿不到保險理賠金。 真令人遺憾，就當作是花錢買教訓吧。"],
+    [A_shareI_f_1, A_pride_f_1],
+    0,
+    ["我應該透過網路分享這次的經驗，讓其他高齡者更有警覺心，才不會受騙。", "太丟臉了，沒想到自己也會像新聞裡的那些老人一樣被網友騙！我絕對不會跟其他人提起這件事。"],
+    "./images/fraud2_f.png",
+    true);
+
+const A_ensureI_f_2 = new Node(
+    "",
+    ["不料，你拿著保單向保險公司申請理賠時，保險公司卻百般刁難，要你證明你確實是因為發生意外才需要進行手術，否則一般的疾病是不會理賠的。 你馬上透過網路聯絡朋友，想請他幫忙和保險理專說明，但他遲遲沒有回覆……。原來，這就是所謂的「金融詐騙」。"],
+    A_ensureI_f_3,
+    0,
+    [],
+    "./images/fraud2_f.png",
+    false);
+
+const A_ensureI_f_1 = new Node(
+    "",
+    ["上週，你因為在用餐時出了一點小意外，牙齒斷了。牙醫表示，手術不涵蓋在健保內，需要自費。真慶幸當初有投保，未雨綢繆果然是對的。"],
+    A_ensureI_f_2,
+    0,
+    [],
+    "./images/toothache_f.png",
+    false);
+
+const A_forceI_f_1 = new Node(
+    "",
+    ["「那不然你先把資料告訴我，我幫你先保留這個機會！」 對方的積極讓你些不知所措，只好順著對方的話，提供了你的基本資料。", ],
+    [A_ensureI_f_1, A_appeal_f_1],
+    0,
+    ["算了，保就保了吧。", "我得向保險公司申訴！"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_searchI_f_4 = new Node(
+    "",
+    ["對方盛情難卻，你也正需要一份保險來保障你的高齡生活，於是便答應了投保，也開始按期繳交保費。能透過網路認識到這麼可靠的朋友，真是太好了。"],
+    A_ensureI_f_1,
+    0,
+    [],
+    "./images/share_f.png",
+    false);
+
+const A_searchI_f_3 = new Node(
+    "",
+    ["「那麼我就直接幫你投保囉！"],
+    A_searchI_f_4,
+    0,
+    [],
+    "./images/insuranceGuy.png",
+    false);
+
+const A_searchI_f_2 = new Node(
+    "",
+    ["「您大可放心，我們的保費非常實惠，換算下來，每天只要一個便當的錢！再說，我相信你也認為，能獲得保障才是最重要的。」"],
+    [A_forceI_f_1, A_ensureI_f_1],
+    0,
+    ["「這……。」", "「這樣啊，那就麻煩您幫忙了。」"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_searchI_f_1 = new Node(
+    "",
+    ["「我推薦的這家意外險，無論什麼年齡都可以投保，也不用做事前的體檢，對於你這樣的獨居高齡者而言，再適合不過了。」"],
+    [A_searchI_f_2, A_searchI_f_3],
+    0,
+    ["「條件這麼好唷……那會不會很貴呀？」", "「太棒了！我之前打聽過的保險都說，60歲以上就一定要做體檢才能保，我都很擔心自己不符合標準，保費會很高呢。」"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_NetFriend_f_3 = new Node(
+    "",
+    ["「你真幽默！不過身為高齡獨居者，確實存在很多安全風險。如果你願意，我能幫你介紹合適的保險，這樣出意外的話，就不用擔心錢的問題了。」", ],
+    [A_forceI_f_1, A_searchI_f_1],
+    0,
+    ["「不好意思，但我需要再考慮一下。」", "「真的嗎？我早就覺得該買個保險了！請務必介紹相關資訊給我。」"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_NetFriend_f_4 = new Node(
+    "",
+    ["「我告訴你，千萬不能心存僥倖！上次一個太太也是這樣『鐵齒』，結果有一天遇到人家酒駕，被撞傷了。因為他沒有保意外險，那些開刀、住院的錢零零總總也要二十幾萬耶！」 二十幾萬！對於已經退休、又沒有其他家人的你而言，也是不小的負擔。經過三思，你決定先探聽看看，到時候再作決定也不遲。", ],
+    A_searchI_f_1,
+    0,
+    [],
+    "./images/insuranceGuy.png",
+    false);
+
+const A_HI_f_2 = new Node(
+    "",
+    ["在〈老人福利法的規範下〉，65歲以上的高齡者，每年都可以免費接受地方政府辦理的基礎檢康檢查。 這天，你收到健檢報告後，驚訝地發現你居然被診斷出罹患了糖尿病！",
+    "2020年，台灣65歲以上民眾高血糖的盛行率，男性與女性分別為27%和28.5%。而且隨著年齡增加，糖尿病患者比例也逐漸升高，且女性患者多於男性。",],
+    A_PRAA_f_1,
+    1,
+    [],
+    "./images/diabetes_f.png",
+    false);
+
+const A_HI_f_1 = new Node(
+    "",
+    ["其實，你早就從網路上搜尋到：「……目前市面上的老人健康險多半帶有壽險的功能，好處是可還本，設定滿幾周年就幾付一筆生存保險金；若因故身亡，同樣可以領到身故保險金。」 對方看你年紀雖長，吸收的新知的能力與熱情卻不亞於他，只能對你甘拜下風。"],
+    A_HI_f_2,
+    0,
+    [],
+    "./images/insuranceGuy.png",
+    false);
+
+const A_NetFriend_f_2 = new Node(
+    "",
+    ["「你說得沒錯，一個人也能過得很好，只要買對保險，人生下半場一樣很有保障！」", ],
+    [A_HI_f_1, A_NetFriend_f_4],
+    0,
+    ["「是呀，我有投保健康險，可以每年領，確實很有保障。」", "「保險？手續很麻煩吧？我待在家也遇不到什麼事……」"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_NetFriend_f_1 = new Node(
+    "",
+    ["「嗨！我追蹤你的頁面很久了，我真的很喜歡你的文字風格，字裡行間充滿了對於人生的成熟體悟。」 哇，他很崇拜你呢！得好好回覆他才行。", ],
+    [A_NetFriend_f_2, A_NetFriend_f_3],
+    0,
+    ["「謝謝你。我希望分享獨居生活的美好，讓大家明白一個人住其實沒這麼糟。」", "「哈哈，不瞞你說，其實那則「打斷手骨顛倒勇」的文章，是我不小心跌倒後有感而發寫的。」"],
+    "./images/insuranceGuy.png",
+    true);
+
+const A_internet_f_3 = new Node(
+    "",
+    ["嗯……你很有警覺心呢。不過現代人愈來愈常透過社群網站分享自己的生活，形同讓個人資訊赤裸裸地被攤在名為「網路」的公共空間中。 不過，如果你既不想透過網路與人交流，又足不出戶的話，與這個世界的連結將會愈來愈少……。", ],
+    [A_getOld_f_1, A_NetFriend_f_1],
+    0,
+    ["人生本是一個人的旅程，其他人充其量只是過客，無須在意。", "唉……好吧，就看看他葫蘆裡賣什麼膏藥好了。"],
+    "./images/netFriend.png",
+    true);
+
+const A_internet_f_2 = new Node(
+    "",
+    ["喔……我懂了，這些網站真是人性化，簡直是專門為高齡者量身打造的社群平台，不只能透過語音操作，還有人聲讀報功能呢！ 「登愣——」原來是好友通知。看來有人透過這個平台，想與你聊聊。", ],
+    [A_internet_f_3, A_NetFriend_f_1],
+    0,
+    ["看起來是個很奇怪的人……我還是別搭理他為妙。", "「相逢何必曾相識？」像我這樣的獨居老人，應該多多建立人際連結才是。"],
+    "./images/netFriend.png",
+    true);
+
+const A_internet_f_1 = new Node(
+    "",
+    ["說得沒錯！根據行政院統計，2018年65歲以上的長者網路使用率高達42%。隨著熟悉網路環境的青壯年人口開始步入中老年，高齡者的網路使用率只會持續增長。 不過，由於視力退化，使用手機螢幕閱讀對你而言變得愈來愈吃力……。", ],
+    [O_comingSoon, A_internet_f_2],
+    0,
+    ["或許我偶爾也該去戶外走走，你知道的，像個老人散個步那樣。", "有聲音、能夠互動的影片與網站愈來愈多，即使視力大不如前，我也能獲得毫不遜於以往的娛樂體驗。"],
+    "./images/share_f.png",
+    true);
+
 const A_retire_f_3 = new Node(
     "",
     ["何不說說你打算如何度過你的退休生涯呢？", ],
-    [A_club_f_1, O_comingSoon],
+    [A_club_f_1, A_internet_f_1],
     0,
     ["我打算參加長青俱樂部，培養休閒興趣之餘，順便結交志同道合的朋友。", "我希望能一個人待在屬於我的空間裡，舒適地進行閱讀與思考。"],
     "./images/retire_f.png",
@@ -236,7 +524,7 @@ const A_retire_f_3 = new Node(
 const A_alone_f_1 = new Node(
     "",
     ["嗯……是不錯，頗有哲學家與藝術家的風範…… 不過，隨著年紀增長、健康不如以往，你確定在沒有家人與朋友的照顧與關懷下，能夠確保自身的安全與生活品質嗎？"],
-    [A_retire_f_3, O_comingSoon],
+    [A_retire_f_3, A_internet_f_1],
     0,
     ["或許我該重新考慮一下關於退休的生活安排……。", "不必擔心，透過網路世界，我也能接觸到新知，並維持人際連結。"],
     "./images/alone_f.png",
@@ -260,11 +548,76 @@ const A_retire_f_1 = new Node(
     "./images/retire_f.png",
     false);
 
+const A_work_f_6 = new Node(
+    "",
+    ["不過，這樣的文章在日漸緊張的世代對立氛圍中，難以獲得共鳴，反而引來許多網友攻訐怒罵，甚至有些同仁也不希望你擅自代表他們的立場。你深受打擊，還是離開了工作崗位。 不過，往好處想，你可以開始享受退休生活了。", ],
+    [A_getOld_f_1, O_comingSoon],
+    0,
+    ["人類真讓我失望，我已經沒興趣與他們來往了。", "說的也是，反正人生是自己的，我的人生下半場也要過得精采才行。"],
+    "./images/enjou_f.png",
+    true);
+
+const A_work_f_5 = new Node(
+    "",
+    ["你向媒體投書，寫道： 「……社會上對於高齡就業者還是有很多不理解的地方。其實，除了通過勞動獲得成就感外，高齡者也希望能在經濟上獨立，讓生活更有安全感。」", ],
+    A_work_f_6,
+    0,
+    [],
+    "./images/phone_f.png",
+    false);
+
+const A_retire_f_4 = new Node(
+    "",
+    ["其他員工們為你辦了退休歡送會，祝福你的人生邁入下一階段。而這次的體驗，也讓你開始思考所謂「高齡生活」的意義。 就這樣，你開始經營網路社群，分享你的體悟。 在為數不多、卻句句精心的回應中，你注意到了一則留言：", ],
+    A_NetFriend_f_1,
+    0,
+    [],
+    "./images/getRetire_f.png",
+    false);
+
+const A_work_f_4 = new Node(
+    "",
+    ["今天上班時，你看到阿榮愁眉苦臉的，好像有什麼煩惱。 「我兒子要我別再來上班了……他說這樣讓他很沒面子，好像沒給我錢、養不起我似的……。」 「我女兒也是，還說我是在跟年輕人搶飯碗吃呢！如果太閒的話，就去當志工。」阿芬也吐著苦水。", ],
+    [A_retire_f_4, A_work_f_5],
+    0,
+    ["原來社會是這樣看待我們的……還是辭職退休好了。", "這些都是誤解，我應該試著澄清。"],
+    "./images/conplain_f.png",
+    true);
+
+const A_work_f_3 = new Node(
+    "",
+    ["有些人覺得，選擇繼續投入就業市場的高齡者，都是迫於經濟壓力；事實上，隨著國人平均壽命增加，愈來愈多高齡者想延長自己的工作年限，為的是繼續保持充實感與成就感。 目前勞動部致力推動「職務再設計」，也就是依照高齡工作者的身心理條件，設計新的作業方式，並提供輔具，以使高齡就業者能再度提供勞力，填補未來的人力缺口。而政府也會提供企業補助以及專人諮詢協助，協助勞雇雙方都能各取所需。", ],
+    A_work_f_4,
+    0,
+    [],
+    "./images/suit_f.png",
+    false);
+
+const A_work_f_2 = new Node(
+    "",
+    ["戴上紅帽子，你也是麥當勞家族的成員了！ 欸欸，先等一下，這可不是在業配喔。是因為麥當勞洞悉到台灣勞動人口的變化趨勢，才會出此策略。 台灣的工作年齡人口（15-64歲者）在2015年後開始下降，於是麥當勞在2016年開始推動「多元化人力池」方案，將中高齡工作人口納入招募對象，以填補其人力缺口。", 
+    "70歲的阿玉就是透過「銀髮人才資源中心」與麥當勞的合作，才會到這裡來上班的。 他在銀髮中心經過了初步的就職訓練，雖然起初有些緊張，不過很快就能進入狀況，幫客人點起餐來也駕輕就熟。"],
+    A_work_f_3,
+    0,
+    [],
+    "./images/fastfood.png",
+    false);
+
+const A_work_f_1 = new Node(
+    "",
+    ["由於〈勞動基準法〉第54條明文規定，雇主得強制年滿65歲勞工退休。許多公司認為高齡者已不具勞動價值，加上〈就業保險法〉強制65歲以上的勞工不再納保，因此就業市場上長期存在「年齡歧視」。 雖然〈中高齡者及高齡者就業促進法〉放寬讓65歲以上的高齡勞工可與雇主簽訂定期契約，增加勞雇雙方彈性。但保險公司對於高齡就業者的意外險，不是拒絕就是會提高保費，降低企業聘雇高齡者的動力。", 
+    "你覓職多時，發現只有像速食店、大賣場等店內的服務、銷售人員，有高齡者的人力需求。"],
+    [A_retire_f_1, A_work_f_2],
+    1,
+    ["這完全不符合我的專業，還是退休好了。", "聊勝於無，我願意去當麥當勞的點餐服務生。"],
+    "./images/hardToWork.png",
+    true);
+
 const M_rent_f = new Node(
     "",
     ["現今的老人獨居宅數，比起十年前增加了一倍。 而在台灣的房屋租賃市場中，高齡者經常是不受房東歡迎的租客，原因不外乎是擔心高齡者維持環境整潔不易，以及不可避免的——孤獨死。因此，就算你有誠意繳租金，可能也租不到房子住……。",
     "幸好，看你外表整潔、打扮也很得體，加上經濟情況無虞，房東才答應把房子繼續租給你。 準備好開始享受你的退休人生了嗎：", ],
-    [O_comingSoon, A_retire_f_1],
+    [A_work_f_1, A_retire_f_1],
     1,
     ["嗯…65歲聽起來，也沒有很老，我不能繼續工作嗎？", "太好了，辛苦了大半輩子，終於可以享受人生了！"],
     "./images/rent_f.png",
@@ -422,6 +775,7 @@ var isOver = false;
 
 var image = document.querySelector(".image");
 var gameTitle = document.querySelector(".game-title");
+var group = document.querySelector(".group-title");
 var description = document.querySelector(".description");
 var choiceList = document.querySelector(".choice-list");
 var choiceA = document.querySelector(".button-left");
@@ -430,8 +784,11 @@ var startButton = document.querySelector(".start");
 var restartButton = document.querySelector(".restart");
 var paragraph = document.querySelector(".paragraph");
 var paragTitle = document.querySelector(".parag-title");
+var playerCondition = document.querySelector(".player-condition");
+var conditionContent = document.querySelector(".condition-content");
 var currentNode = "";
 var textCount = 0;
+var conditionCount = 0;
 
 window.addEventListener("keydown", nextParagraph);
 choiceA.addEventListener("click", handleChoice);
@@ -455,9 +812,10 @@ function toggleSound() {
 function startGame() {
     isStart = true;
     gameTitle.style.display = "none";
+    group.style.display = "none";
     startButton.style.display = "none";
     description.style.display = "block";
-    choiceList.style.display = "inline-block";
+    choiceList.style.display = "block";
     choiceList.style.visibility = "hidden";
     currentNode = M_start;
     insertParagraph(currentNode.text[textCount]);
@@ -470,6 +828,7 @@ function restartGame() {
     gameTitle.style.display = "block";
     startButton.style.display = "block";
     restartButton.style.display = "none";
+    conditionContent.innerHTML = "";
     description.style.display = "none";
     choiceList.style.display = "none";
     choiceList.style.visibility = "visible";
@@ -513,6 +872,38 @@ function jumpToNextSection(i) {
             }
             break;
         default:
+            switch (currentNode.choices[i]){
+                case "男":
+                    playerCondition.style.visibility = "visible";
+                    conditionContent.innerHTML = "男　";
+                    conditionCount = conditionCount + 1;
+                    break;
+                case "女":
+                    playerCondition.style.visibility = "visible";
+                    conditionContent.innerHTML = "女　";
+                    conditionCount = conditionCount + 1;
+                    break;
+                case "有":
+                    if(conditionCount == 1) conditionContent.innerHTML = conditionContent.innerHTML + "/　有配偶　";
+                    else if(conditionCount == 2) conditionContent.innerHTML = conditionContent.innerHTML + "/　有子女　";
+                    conditionCount = conditionCount + 1;
+                    break;
+                case "無":
+                    if(conditionCount == 1) conditionContent.innerHTML = conditionContent.innerHTML + "/　單身　";
+                    else if(conditionCount == 2) conditionContent.innerHTML = conditionContent.innerHTML + "/　無子女　";
+                    conditionCount = conditionCount + 1;
+                    break;
+                case "自宅":
+                    conditionContent.innerHTML = conditionContent.innerHTML + "/　自宅";
+                    conditionCount = conditionCount + 1;
+                    break;
+                case "租屋":
+                    conditionContent.innerHTML = conditionContent.innerHTML + "/　租屋";
+                    conditionCount = conditionCount + 1;
+                    break;
+                default:
+                    break;
+            }
             paragraph.innerHTML = "";
             textCount = 0;
             currentNode = currentNode.next[i];
